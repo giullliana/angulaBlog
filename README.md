@@ -1,3 +1,3 @@
-# angularBlog
+Projeto de Blog
 
-Projeto desenvolvido utilizando o Framework Angular
+Desenvolvido utilizando o Framework Angular
