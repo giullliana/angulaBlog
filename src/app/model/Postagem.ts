@@ -1,3 +1,4 @@
+import { Tema } from "./Tema";
 import { User } from "./User";
 
 
@@ -7,5 +8,5 @@ export class Postagem{
     public texto: string
     public date:Date
     public usuario:User
-    public postagem: Postagem
+    public tema: Tema
 }
