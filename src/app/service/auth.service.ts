@@ -14,21 +14,22 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
-  entrar(userLogin: UserLogin): Observable<UserLogin>{
-    return this.http.post<UserLogin>('http://localhost:8080/usuarios/logar',userLogin)
+  entrar(userLogin: UserLogin): Observable<UserLogin> {
+    console.log(userLogin)
+    return this.http.post<UserLogin>('http://localhost:8080/usuarios/logar', userLogin)
 
-      }
-      cadastrar(user: User): Observable<User>{
-return this.http.post<User>("http://localhost:8080/usuarios/cadastrar", user)
+  }
+  cadastrar(user: User): Observable<User> {
+    return this.http.post<User>("http://localhost:8080/usuarios/cadastrar", user)
 
-      }
-      logado(){
-        let ok:boolean = false
+  }
+  logado() {
+    let ok: boolean = false
 
-        if(environment.token != ''){
-          ok = true
-        }
-        return ok
+    if (environment.token != '') {
+      ok = true
+    }
+    return ok
 
-      }
+  }
 }
